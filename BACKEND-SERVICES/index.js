@@ -11,12 +11,12 @@ dotenv.config();
 
 mongoose.connect(process.env.DB_CONNECTION).then(()=>{
     console.log("DB connection is successfull");   
-}).catch((err)=>{
-    console.log(err);   
+}).catch((error)=>{
+    console.log(error);   
 });
 
 const run=()=>{
-    cron.schedule('* * * * * *', () => {
+    cron.schedule('* * * * *', () => {
         console.log('running a task every second');
 
         expenseEmail();
@@ -24,8 +24,8 @@ const run=()=>{
 }
 run();
 
-
-app.listen(process.env.PORT,()=>{
-    console.log(`server is running on port ${process.env.PORT}`);
+const PORT= process.env.PORT;
+app.listen(PORT,()=>{
+    console.log(`Background Service is running on port ${process.env.PORT}`);
     
 })

@@ -22,4 +22,4 @@ const expenseEmail = async () => {
     }
 };
 
-module.exports - expenseEmail;
+module.exports= expenseEmail;

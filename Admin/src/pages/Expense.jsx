@@ -11,19 +11,19 @@ const Expense=()=> {
       {field:'date',headerName:'Transactiion Date',width:130},
       {field:'amount',headerName:'Amount',width:130},
       {field:'edit',headerName:'Edit',width:150,
-        rendercell:()=>{
+        renderCell:()=>{
           return(
             <>
-            <button className='bg-teal-400 text-white cursor-pointer w-[70opx]'>Edit</button>
+            <button className='bg-pink-200 text-gray-400 w-[700px]'>Edit</button>
             </>
           )
         }
       },
       {field:'delete',headerName:'Delete',width:150,
-        rendercell:()=>{
+        renderCell:()=>{
           return(
             <>
-            <button className='bg-teal-400 text-white cursor-pointer w-[70opx]'><FaTrash></FaTrash></button>
+            <button className='text-red-600 cursor-pointer m-2'><FaTrash></FaTrash></button>
             </>
           )
         }
